@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Calculadora {
 
@@ -7,6 +8,9 @@ public class Calculadora {
     }
 
     public int dividir(int numerador, int denominador){
+        if(denominador == 0){
+            throw new ArithmeticException("Divisão por zero.");
+        }
         return numerador / denominador;
     }
     
